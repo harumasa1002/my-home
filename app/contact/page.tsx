@@ -1,81 +1,49 @@
 // app/contact/page.tsx
-"use client";
-
-import { useState } from "react";
-
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
-    <main className="min-h-screen p-10 bg-gray-50 text-gray-800">
-      <section className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
+    <main className="min-h-screen bg-gray-50 text-gray-900">
+      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+        <h1 className="section-title mb-8">お問い合わせ</h1>
 
-        <p className="mb-6 leading-relaxed">
-          解析に関するご相談・質問などがありましたら、こちらのフォームよりお問い合わせください。
-          現時点ではフォーム送信のみ可能です（メール送信機能は後日追加予定）。
+        <p className="lead mb-4">
+          研究内容やデータの状況に関するご相談は、下記のメールアドレスまでご連絡ください。
+          解析の可否や進め方について、内容を確認のうえ対応可能な範囲でお返事いたします。
         </p>
 
-        {submitted ? (
-          <div className="p-6 bg-green-100 border border-green-300 rounded-md">
-            <p className="text-green-800 font-semibold">
-              送信が完了しました。内容を確認次第ご連絡いたします。
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6 bg-white p-6 rounded-md shadow-sm border"
-          >
-            {/* 名前 */}
-            <div>
-              <label className="block mb-1 font-semibold">お名前</label>
-              <input
-                type="text"
-                required
-                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-blue-200"
-                placeholder="山田太郎"
-              />
-            </div>
+        <p className="body-text mb-10">
+          この段階で研究内容や解析方針が固まっていなくても問題ありません。
+          「まずは状況を共有したい」といったご相談でも構いません。
+        </p>
 
-            {/* メール */}
-            <div>
-              <label className="block mb-1 font-semibold">メールアドレス</label>
-              <input
-                type="email"
-                required
-                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-blue-200"
-                placeholder="example@example.com"
-              />
-            </div>
+        {/* メールアドレス表示 */}
+        <div className="card card-pad mb-10">
+          <p className="note-text mb-2">連絡先メールアドレス</p>
+          <p className="font-mono text-gray-900 text-base break-all">
+            haru.pharma.phd@gmail.com
+          </p>
+          <p className="note-text mt-3">
+            ※上記アドレスをコピーしてご連絡ください。
+          </p>
+        </div>
 
-            {/* 内容 */}
-            <div>
-              <label className="block mb-1 font-semibold">お問い合わせ内容</label>
-              <textarea
-                required
-                rows={6}
-                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-blue-200"
-                placeholder="お問い合わせ内容をご記入ください"
-              ></textarea>
-            </div>
+        {/* ガイド */}
+        <h2 className="sub-title mb-3">お問い合わせの際は、以下の点を分かる範囲でお知らせください。
+すべてを記載いただく必要はありません。</h2>
 
-            {/* 送信ボタン */}
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-md"
-            >
-              送信
-            </button>
-          </form>
-        )}
+        <div className="card card-pad">
+          <ul className="list-standard">
+            <li>研究・プロジェクトの概要（研究分野、テーマ、目的（論文化／探索的解析 など））</li>
+            <li>ご相談内容（解析のご相談、データ整理、結果解釈など（（具体的でなくても構いません）））</li>
+            <li>データの状況（データの種類・規模（例：臨床PKデータ、例数など））</li>
+            <li>ご希望の時期（ご希望のスケジュールや目安の期限）</li>
+            <li>ご所属（任意）（大学・研究機関名、研究室名など）</li>            
+          </ul>
+
+          <p className="note-text mt-6">
+            ※研究データの共有方法や機密性について配慮が必要な場合は、その旨も併せてお知らせください。
+          </p>
+        </div>
       </section>
     </main>
   );
 }
-
