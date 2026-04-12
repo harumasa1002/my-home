@@ -40,16 +40,13 @@ export default function Services() {
             特定の商用ソフトに依存しないため、研究室側でも同じ解析環境を再現しやすく、
             <span className="font-semibold">解析結果の透明性と再現性を重視した整理</span>が可能です。
           </p>
-          <p className="note-text">
-            ※ご希望に応じて、解析手順や前提（単位・欠測の扱い等）も含めて、結果の読み取りがしやすい形に整えます。
-          </p>
         </div>
 
         {/* NCAについて */}
-        <h2 className="sub-title mb-4">薬物動態解析（NCA）について</h2>
+        <h2 className="sub-title mb-4">Non-Compartmental Analysis（NCA）について</h2>
         <div className="card card-pad mb-10">
           <p className="body-text mb-3">
-            NCA（非コンパートメント解析）は、投与後に測定した濃度データをもとに、薬物が体内でどの程度吸収され、
+            NCAは、投与後に測定した濃度データをもとに、薬物が体内でどの程度吸収され、
             どのくらいの時間存在するのかを<span className="font-semibold">比較的シンプルな方法で整理する</span>解析手法です。
           </p>
           <p className="body-text mb-3">
@@ -67,7 +64,7 @@ export default function Services() {
         <div className="card card-pad mb-10">
           <ul className="list-standard">
             <li>
-              薬物動態解析（非コンパートメント解析：AUC・Cmax・Tmax・t
+              薬物動態解析（AUC・Cmax・Tmax・t
               <sub>1/2</sub> などの算出、濃度–時間プロットの作成）
             </li>
             <li>簡易な PK/PD・曝露–反応解析（Emax、IC50 などのモデルを用いた探索的解析）</li>

@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="card card-pad mb-10">
           <p className="note-text mb-2">連絡先メールアドレス</p>
           <p className="font-mono text-gray-900 text-base break-all">
-            haru.pharma.phd@gmail.com
+            contact@harupharma.com
           </p>
           <p className="note-text mt-3">
             ※上記アドレスをコピーしてご連絡ください。

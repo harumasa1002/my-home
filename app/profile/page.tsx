@@ -88,12 +88,6 @@ export default function Profile() {
           臨床薬理の立場から <span className="font-semibold">結果の解釈と考察の整理</span> を行ってきました。
         </p>
 
-        {/* M&S（「検討中」表現をさらに誤解が少ない形に） */}
-        <p className="note-text mb-10">
-          ※将来的には、非臨床・臨床データをより統合的に捉えるモデリング＆シミュレーション（M&amp;S）に関する支援についても、
-          ニーズや準備状況に応じて提供範囲の拡大を検討しています（現時点では提供内容を限定しています）。
-        </p>
-
         <div className="divider" />
 
         {/* 想い */}
