@@ -38,7 +38,7 @@ export default function RootLayout({
                 くすりとデータ
               </span>
               <span className="hidden sm:inline text-sm text-gray-500">
-                アカデミア向け PK/PD 解析支援
+                アカデミア向け PK/PD 解析・データ活用支援
               </span>
             </Link>
 

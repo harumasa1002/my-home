@@ -10,13 +10,20 @@ export default function Services() {
         {/* 基本方針 */}
         <div className="card card-pad mb-10">
           <p className="lead mb-4">
-            大学・研究機関の研究室（アカデミア）を主な対象として、非臨床・臨床データの薬物動態／薬力学（PK/PD）解析と、
-            解析結果の解釈・整理を支援します。
+            大学・研究機関の研究室（アカデミア）を主な対象として、薬物動態（PK）・薬力学（PD）データの活用に関する
+            論点整理、解析方針の整理、データ解析、図表作成を支援します。
           </p>
 
           <p className="body-text mb-4">
-            「データはあるが、どのように解析・解釈すべきか迷っている」「論文や学会発表に向けて、結果を整理したい」といった状況に対して、
-            研究目的に沿った解析方針の整理から、実装・図表作成までを段階的に進めます。
+            「PKデータを測定する前に、何を考えておくべきか整理したい」
+            「データはあるが、どのように解析・解釈すべきか迷っている」
+            「論文や学会発表に向けて、結果を分かりやすくまとめたい」といった段階からご相談いただけます。
+          </p>
+
+          <p className="body-text">
+            本サービスでは、試験設計そのものを包括的に請け負うのではなく、
+            PK/PD解析や結果解釈の観点から、測定前・解析前に確認しておくべき論点を整理し、
+            研究目的に沿ったデータ活用を支援します。
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -29,16 +36,68 @@ export default function Services() {
           </div>
         </div>
 
+        {/* 相談できる段階 */}
+        <h2 className="sub-title mb-4">相談できる段階</h2>
+        <div className="card card-pad mb-10">
+          <p className="body-text mb-4">
+            PK/PD解析では、測定後に解析を行うだけでなく、
+            測定前・解析前の段階で「どのような目的でデータを取得するのか」
+            「取得したデータをどのように解釈するのか」を整理しておくことが重要です。
+          </p>
+
+          <ul className="list-standard">
+            <li>PKデータを取得する意義を整理したい段階</li>
+            <li>測定前に、解析・解釈で問題になりやすい点を確認したい段階</li>
+            <li>すでに濃度データや薬効データがあり、解析方法を検討している段階</li>
+            <li>論文・学会発表に向けて、図表や考察を整理したい段階</li>
+          </ul>
+
+          <p className="note-text mt-4">
+            ※測定業務そのものや、試験設計全体の代行は対象外です。解析・解釈を見据えた論点整理として対応します。
+          </p>
+        </div>
+
+        {/* 現在対応している内容 */}
+        <h2 className="sub-title mb-4">現在対応している内容</h2>
+        <div className="card card-pad mb-10">
+          <ul className="list-standard">
+            <li>
+              測定前・解析前の論点整理
+              <span className="note-text">
+                （PKデータ取得の目的、確認したい仮説、解析で見たい指標の整理など）
+              </span>
+            </li>
+            <li>
+              薬物動態解析
+              <span className="note-text">
+                （AUC・Cmax・Tmax・t
+                <sub>1/2</sub> などの算出、濃度–時間プロットの作成）
+              </span>
+            </li>
+            <li>
+              簡易なPK/PD・曝露–反応解析
+              <span className="note-text">
+                （薬効データと濃度データの関係整理、Emax・IC50などを用いた探索的解析）
+              </span>
+            </li>
+            <li>
+              Rを用いたデータ整理・可視化
+              <span className="note-text">（記述統計、グラフ作成、基本的な比較解析）</span>
+            </li>
+            <li>論文投稿・学会発表を見据えた図表作成と、解析結果の解釈・考察整理の支援</li>
+          </ul>
+        </div>
+
         {/* Rについて */}
         <h2 className="sub-title mb-4">解析に使用するソフトウェアについて</h2>
         <div className="card card-pad mb-10">
           <p className="body-text mb-3">
             本サービスで行う解析は、原則として <span className="font-semibold">R</span> を用いて実施します。
           </p>
-          <p className="body-text mb-3">
-            R はオープンソースの統計解析環境であり、大学・研究機関を中心に広く利用されています。
-            特定の商用ソフトに依存しないため、研究室側でも同じ解析環境を再現しやすく、
-            <span className="font-semibold">解析結果の透明性と再現性を重視した整理</span>が可能です。
+          <p className="body-text">
+            Rはオープンソースの統計解析環境であり、大学・研究機関でも導入しやすいことが特徴です。
+            特定の商用ソフトに依存しないため、解析手順を確認しやすく、
+            <span className="font-semibold">透明性と再現性を重視した解析</span>を行いやすい利点があります。
           </p>
         </div>
 
@@ -59,31 +118,16 @@ export default function Services() {
           </p>
         </div>
 
-        {/* 現在対応している内容 */}
-        <h2 className="sub-title mb-4">現在対応している内容</h2>
-        <div className="card card-pad mb-10">
-          <ul className="list-standard">
-            <li>
-              薬物動態解析（AUC・Cmax・Tmax・t
-              <sub>1/2</sub> などの算出、濃度–時間プロットの作成）
-            </li>
-            <li>簡易な PK/PD・曝露–反応解析（Emax、IC50 などのモデルを用いた探索的解析）</li>
-            <li>
-              R を用いたデータ整理・可視化{" "}
-              <span className="note-text">（記述統計、グラフ作成、基本的な比較解析）</span>
-            </li>
-            <li>論文投稿・学会発表を見据えた図表作成と、解析結果の解釈・考察整理の支援</li>
-          </ul>
-        </div>
-
         {/* 進め方 */}
         <h2 className="sub-title mb-4">進め方（例）</h2>
         <div className="card card-pad mb-10">
           <ul className="list-standard">
-            <li>研究目的・アウトカム・解析のゴールを確認</li>
-            <li>データ構造（測定時点、欠測、単位、ID 等）を確認し、解析方針を整理</li>
-            <li>R を用いた解析・図表作成（必要に応じて追加解析を相談）</li>
-            <li>解析結果の共有と解釈の整理</li>
+            <li>研究目的・背景・確認したい仮説を確認</li>
+            <li>PK/PDデータで何を明らかにしたいのかを整理</li>
+            <li>測定前・解析前に確認しておくべき論点を整理</li>
+            <li>データ構造（測定時点、欠測、単位、ID、群情報など）を確認</li>
+            <li>Rを用いた解析・図表作成</li>
+            <li>解析結果の共有と、論文・学会発表を見据えた解釈の整理</li>
           </ul>
         </div>
 
@@ -91,30 +135,44 @@ export default function Services() {
         <h2 className="sub-title mb-4">納品物の例</h2>
         <div className="card card-pad mb-10">
           <ul className="list-standard">
-            <li>解析結果の図表（濃度–時間プロット、PK パラメータ一覧など）</li>
-            <li>主要な解析結果と解釈をまとめた簡潔な解析メモ</li>
+            <li>測定前・解析前に確認すべき論点をまとめた簡潔な相談メモ</li>
+            <li>解析結果の図表（濃度–時間プロット、PKパラメータ一覧、曝露–反応プロットなど）</li>
+            <li>主要な解析結果と解釈をまとめた解析メモ</li>
             <li>
-              再現性を担保した R スクリプト{" "}
+              再現性を担保したRスクリプト
               <span className="note-text">（ご希望に応じてオプション対応）</span>
             </li>
           </ul>
         </div>
 
-        {/* 発展的内容（検討中に留める） */}
+        {/* 対応しやすい相談例 */}
+        <h2 className="sub-title mb-4">対応しやすい相談例</h2>
+        <div className="card card-pad mb-10">
+          <ul className="list-standard">
+            <li>薬効試験に血中濃度データを加える意味を整理したい</li>
+            <li>PKデータを測定する前に、解析で困りやすい点を確認したい</li>
+            <li>投与量や投与条件の違いを、AUCやCmaxで比較したい</li>
+            <li>薬効データだけでは解釈しにくい結果を、曝露量との関係から整理したい</li>
+            <li>論文・学会発表用に、解析結果を分かりやすい図表にしたい</li>
+          </ul>
+        </div>
+
+        {/* 発展的内容 */}
         <h2 className="sub-title mb-4">発展的な解析について（将来的な提供を検討中）</h2>
         <div className="card card-pad mb-10">
           <p className="body-text mb-4">
-            将来的には、非臨床・臨床データをより統合的に捉えるために、母集団解析や PK/PD モデリング・シミュレーション（M&amp;S）の考え方を
-            取り入れた解析支援の提供も検討しています。現在は、個別の解析結果を丁寧に解釈・整理することを主な支援内容としています。
+            将来的には、非臨床・臨床データをより統合的に捉えるために、
+            母集団解析やPK/PDモデリング・シミュレーション（M&amp;S）の考え方を取り入れた解析支援の提供も検討しています。
           </p>
 
           <ul className="list-standard">
-            <li>探索的な母集団 PK 解析（PopPK）の考え方</li>
-            <li>PK/PD モデリング・シミュレーション（M&amp;S）の考え方を用いた検討</li>
+            <li>探索的な母集団PK解析（PopPK）の考え方</li>
+            <li>PK/PDモデリング・シミュレーション（M&amp;S）の考え方を用いた検討</li>
           </ul>
 
           <p className="note-text mt-4">
-            ※現時点では、上記の内容は「提供を検討している領域」としての記載です。具体的な実施内容は、準備状況に応じて段階的に整理していきます。
+            ※現時点では、上記の内容は「提供を検討している領域」としての記載です。
+            具体的な実施内容は、準備状況に応じて段階的に整理していきます。
           </p>
         </div>
 
@@ -122,13 +180,14 @@ export default function Services() {
         <h2 className="sub-title mb-4">料金について（目安）</h2>
         <div className="card card-pad mb-10">
           <p className="body-text">
-            解析内容やデータ量、研究の進行状況により必要な作業は異なるため、料金は一律ではなく、内容を伺ったうえで個別にご相談しています。
+            相談内容、データ量、解析の複雑さ、必要なアウトプットにより作業量が変わるため、
+            料金は一律ではなく、内容を伺ったうえで個別にご相談しています。
           </p>
 
           <p className="body-text mt-3">
-            目安としては、比較的シンプルな PK 解析や図表作成の場合、
+            目安としては、比較的シンプルな論点整理、PK解析、図表作成の場合、
             <span className="font-semibold">数万円程度から</span>
-            の範囲で対応可能なケースを想定しています。研究費の規模や目的に応じて、無理のない範囲で対応方法をご提案します。
+            の範囲で対応可能なケースを想定しています。
           </p>
 
           <p className="note-text mt-4">
@@ -136,8 +195,21 @@ export default function Services() {
           </p>
         </div>
 
+        {/* 注意書き */}
+        <div className="card card-pad mb-10">
+          <h2 className="sub-title mb-4">ご相談にあたって</h2>
+          <p className="body-text mb-3">
+            本サービスは、研究目的に沿ったデータ活用・解析・解釈整理を支援するものです。
+            研究の最終的な判断、実験計画の決定、論文内容の責任は、研究実施者・研究機関に帰属します。
+          </p>
+          <p className="body-text">
+            また、現在は個人での対応となるため、内容や時期によっては対応可能な範囲を相談させていただく場合があります。
+          </p>
+        </div>
+
         <p className="note-text">
-          ※上記は現時点での想定内容です。実際のご依頼については、研究内容やデータ構造を確認したうえで、対応可能な範囲を個別にご相談させていただきます。
+          ※上記は現時点での想定内容です。実際のご依頼については、研究内容やデータ構造を確認したうえで、
+          対応可能な範囲を個別にご相談させていただきます。
         </p>
       </section>
     </main>
