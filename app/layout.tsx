@@ -5,6 +5,7 @@ import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -93,6 +94,9 @@ export default function RootLayout({
             </p>
           </div>
         </footer>
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </body>
     </html>
   );
